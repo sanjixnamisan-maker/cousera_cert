@@ -1,0 +1,126 @@
+
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; font-family: var(--font-sans); }
+  body { background: white; }
+  .top-bar { background: white; border-bottom: 1px solid #e0e0e0; padding: 10px 24px; display: flex; align-items: center; gap: 16px; }
+  .coursera-logo { color: #0056D2; font-size: 22px; font-weight: 700; letter-spacing: -0.5px; }
+  .top-bar nav { display: flex; gap: 4px; align-items: center; font-size: 14px; }
+  .top-bar nav a { color: #333; text-decoration: none; padding: 4px 10px; }
+  .top-bar nav a.dropdown::after { content: ' ▾'; font-size: 10px; }
+  .search-bar { flex: 1; max-width: 440px; border: 1px solid #ccc; border-radius: 4px; padding: 7px 12px; font-size: 14px; color: #555; display: flex; align-items: center; gap: 8px; }
+  .search-bar input { border: none; outline: none; flex: 1; font-size: 14px; background: transparent; color: var(--color-text-primary); }
+  .search-icon { color: white; background: #0056D2; border-radius: 50%; width: 26px; height: 26px; display: flex; align-items: center; justify-content: center; font-size: 13px; cursor: pointer; flex-shrink: 0; }
+  .top-bar .auth { margin-left: auto; display: flex; gap: 10px; align-items: center; }
+  .btn-login { font-size: 14px; color: #333; background: none; border: none; cursor: pointer; padding: 6px 12px; }
+  .btn-join { font-size: 14px; color: #0056D2; border: 1.5px solid #0056D2; border-radius: 4px; padding: 6px 16px; background: white; cursor: pointer; font-weight: 500; }
+  .breadcrumb { font-size: 13px; color: #555; padding: 12px 24px 4px; }
+  .page-title { font-size: 26px; font-weight: 700; padding: 4px 24px 16px; color: #1a1a1a; }
+  .content { display: flex; gap: 24px; padding: 0 24px 32px; }
+  .left { flex: 1.1; }
+  .right { flex: 0.9; }
+  .completion-box { background: #EEF4FF; border-radius: 8px; padding: 20px 24px; display: flex; gap: 16px; align-items: flex-start; margin-bottom: 24px; }
+  .avatar { width: 56px; height: 56px; border-radius: 50%; background: #b0bec5; display: flex; align-items: center; justify-content: center; flex-shrink: 0; position: relative; }
+  .avatar .check { position: absolute; top: -2px; right: -2px; background: #1976D2; color: white; border-radius: 50%; width: 18px; height: 18px; font-size: 11px; display: flex; align-items: center; justify-content: center; }
+  .avatar svg { opacity: 0.4; }
+  .comp-info h3 { font-size: 15px; font-weight: 700; margin-bottom: 4px; color: #1a1a1a; }
+  .comp-info p { font-size: 14px; color: #333; margin-bottom: 2px; }
+  .comp-info .note { font-size: 13px; color: #555; margin-top: 8px; }
+  .comp-info .note a { color: #0056D2; text-decoration: underline; cursor: pointer; }
+  .enroll-row { display: flex; align-items: center; gap: 16px; background: white; border: 1px solid #e0e0e0; border-radius: 8px; padding: 14px 18px; margin-bottom: 24px; }
+  .packt-badge { background: #F77B00; color: white; border-radius: 6px; width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; flex-shrink: 0; }
+  .packt-badge .inner { display: flex; flex-direction: column; align-items: center; line-height: 1; }
+  .enroll-link { font-size: 14px; font-weight: 600; color: #0056D2; text-decoration: underline; cursor: pointer; }
+  .enroll-sub { font-size: 12px; color: #555; }
+  .enroll-btn { margin-left: auto; background: #0056D2; color: white; border: none; border-radius: 4px; padding: 10px 20px; font-size: 14px; font-weight: 600; cursor: pointer; }
+  .learn-title { font-size: 15px; font-weight: 600; margin-bottom: 12px; color: #1a1a1a; }
+  .learn-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 16px; margin-bottom: 20px; }
+  .learn-item { display: flex; gap: 8px; align-items: flex-start; font-size: 13px; color: #333; }
+  .check-icon { color: #1a6e3a; font-size: 13px; flex-shrink: 0; margin-top: 1px; }
+  .skills-title { font-size: 15px; font-weight: 600; margin-bottom: 10px; color: #1a1a1a; }
+  .skills-wrap { display: flex; flex-wrap: wrap; gap: 8px; }
+  .skill-tag { background: #f0f0f0; border-radius: 20px; padding: 5px 14px; font-size: 13px; color: #333; }
+  .cert-card { border: 1px solid #ccc; border-radius: 6px; overflow: hidden; background: white; }
+  .cert-inner { padding: 12px; background: #f8f8f8; }
+  .cert-image { width: 100%; height: auto; display: block; border-radius: 3px; }
+</style>
+
+<h2 class="sr-only">Coursera course certificate page for Web Security, Social Engineering & External Attacks completed by Krishwin D S</h2>
+
+<div class="top-bar">
+  <span class="coursera-logo">coursera</span>
+  <nav>
+    <a href="#" class="dropdown">Explore</a>
+    <a href="#">Degrees</a>
+  </nav>
+  <div class="search-bar">
+    <input type="text" placeholder="What do you want to learn?" readonly />
+    <div class="search-icon">&#128269;</div>
+  </div>
+  <div class="auth">
+    <button class="btn-login">Log In</button>
+    <button class="btn-join">Join for Free</button>
+  </div>
+</div>
+
+<div class="breadcrumb">Course Certificate</div>
+<div class="page-title">Web Security, Social Engineering &amp; External Attacks</div>
+
+<div class="content">
+  <div class="left">
+    <div class="completion-box">
+      <div class="avatar">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="12" r="7" fill="#607D8B"/><ellipse cx="16" cy="28" rx="13" ry="7" fill="#607D8B"/></svg>
+        <div class="check">✓</div>
+      </div>
+      <div class="comp-info">
+        <h3>Completed by Krishwin D S</h3>
+        <p><strong>January 28, 2026</strong></p>
+        <p><strong>14 hours (approximately)</strong></p>
+        <p class="note">Krishwin D S's account is verified. Coursera certifies their successful completion of <a>Web Security, Social Engineering &amp; External Attacks</a></p>
+      </div>
+    </div>
+
+    <div class="enroll-row">
+      <div class="packt-badge">
+        <div class="inner"><span style="font-size:15px;">&lt;</span><span>packt</span><span style="font-size:15px;">&gt;</span></div>
+      </div>
+      <div>
+        <div class="enroll-link">Web Security, Social Engineering &amp; External Attacks</div>
+        <div class="enroll-sub">Packt</div>
+      </div>
+      <button class="enroll-btn">Enroll for Free</button>
+    </div>
+
+    <div class="learn-title">What you will learn</div>
+    <div class="learn-grid">
+      <div class="learn-item"><span class="check-icon">✓</span><span>Execute advanced web-based attacks using tools like Beef and msfvenom</span></div>
+      <div class="learn-item"><span class="check-icon">✓</span><span>Understand and defend against social engineering techniques like phishing and malware</span></div>
+      <div class="learn-item"><span class="check-icon">✓</span><span>Perform effective penetration testing and vulnerability assessments on web applications</span></div>
+      <div class="learn-item"><span class="check-icon">✓</span><span>Safeguard against cross-site scripting (XSS) and other common web application vulnerabilities</span></div>
+    </div>
+
+    <div class="skills-title">Skills you will gain</div>
+    <div class="skills-wrap">
+      <span class="skill-tag">Network Security</span>
+      <span class="skill-tag">Security Awareness</span>
+      <span class="skill-tag">Exploitation techniques</span>
+      <span class="skill-tag">Malware Protection</span>
+      <span class="skill-tag">Metasploit</span>
+      <span class="skill-tag">Vulnerability Assessments</span>
+      <span class="skill-tag">Application Security</span>
+      <span class="skill-tag">Penetration Testing</span>
+      <span class="skill-tag">Cybersecurity</span>
+      <span class="skill-tag">Javascript</span>
+      <span class="skill-tag">Cyber Attacks</span>
+    </div>
+  </div>
+
+  <div class="right">
+    <div class="cert-card">
+      <div class="cert-inner">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABZAAAANQCAYAAAB60pMPAAAACXBIWXMAAA7DAAAOwwHHb6tr AAAgAElEQVR4Xuy9CZQkV3UmN/POq6ysrpqhZ2a7bQFqbXiPBYNALBpgMMvCxjjY2HDsDDiBjz07 tneysWHjxHiJHBNzHZs2G3Z2ZnjE2nxgbGQj2FoE9rBtbQQzUnf3dFV3ZWZmVVZWZuX/5l/t vrHdEREREf/3Onvv+9/7+/e9cCKLi4uSEEIIIYQQQgghhBBCCCHkXpPJZIjrulwul0sSJ0ne \
+fexjH7NUVdUkZXm+z+l0ipWVFVldXZXj8ZgMh0OZz+eytrYm6+vrI5fL5TwfDAbSarWYpmmVpVJ peGBgQLLZLOzt7TE2m83k8OHDrFAoUKfTIafTKfP5nA+HQxoOhzSbzWg6nb4gKEqfz0etVkuW l5dlf39f1tfXWZQjkQhvt9tsNBpRs9mkbrcrt27dosFgQE6nk/l8PnI6nbzb7bILFy7w7u4uG41G bBzHbBzHbBzHrFgs0qVLl3hfXx9bWlpiXV1dLBQKsZGRERHH8e1D/cMqxWIRYlEqqVaL1Wo1HgqF eCAQ4AzDkOVymdLpNJVKJYpGo5TJZCS/3y8URdEVVVU1SZIkdnl5mZVKJRGLxXgsFuONRoMsy5L1 9XV2/vx5LobyPjY2RuFwmBcKBWo0GrS8vEyVSoWlUikuzs5+ywQGAwM2Pz9PNTU1NDAwoKgvvvgi YzAYsIGBAUVMuNzcXrfJvhQKhSySyajKZPqI2p6EhhxyR1EURZVlmfk8HpXX62Uvvvgiazzd lVi9Vu+IksmL1L/1S5TrfILGXvw9ytT9d1qpP0ojB26hnj+5J9WXvkCp+f+q3vN/odHjb9HQoZup 5+9uo74/+SHVl36Z7tp8lSqn30kVr95CleP3pd7XfozWvvInlH/8o9Tz57dQ37/8V1p6+GvU+4YF yj34Q2r6HxFV5x/6bv/mEXGZzOaRwGBAWltb+Pg6c4qrwzcM0S27hXxek72pI6MYSj1F2+V6rXu6 ZxNY9S42KfUDXDUdHKiTgE4TOgPuXzW6DHV/BPCsQGcBXQX0dKCnBno60NOCng30dKGnBz1d6OlE T1/06URfP/oG0DeAvi70daFvEH0D6JtE3yD6BtE3iL5F9C2ubxF9m+hbR98h+jbRt5m+xfXtoW8T fZvo20PfJvqW0LeEvk30LaFvE32b6NtB3wb6NtC3jb5t9O2gbyN9O+jbRd82+nbQt5O+HfTtoW8X fbvq20XfLvt20HeAvi30XaRvN32X6dtN3276LtK3h76L9O2h7xJ9O+nbTN8l+vbQd5m+HfTdpW8H fZfp20XfPvoW0XeRvov0XaLvHn0X6btH3z36rtB3h76r9N2j7w59d+i7Rd8d+u7Rd5e+u/RdpW8X fVfoW0TfJfou0feRvnv0/abvH3236f+P/kH6P9H/L/0v9P+jfxD9I/SPoP83+v/Q/z/6P9M/Sf83 1qr/L/pn6h+qf7T+n+kfpv+H6T+m/4v6P6f/i/pf1v+t/u/5v/+/xf99/v9+/X+/xv++P+j/DOMX 5hf46OVFOV7wh+rHUk1R1Aj91Oq1nJVDwQJFMY4Tj2WZvby8TK1WSzqdDjUaDQqHw/Lm5iZNJhMe DAalXq9TrVaTxWJBs9mMhsOhVKtVqt1uy/LysqysrFAsFqPBYCDj8ZhWVlakVCrJ0tISnDh27BiF QiEKh8PU29tLm5ubI5fLxRKJhIxGIzo/Py+Xy8VqtRodPXqUhsOhtNttfvz4cWq1WrSxsUH5fJ7f vHmTdzodvr29TeFwmI3HY2o0GnS73aYrKyvMbrfz27dvk9/v5+vr61QqlWRtbY0dO3aMr66u0sbG Bk2nU7GxsSE1Go3IxsYGO3/+PBuNRjQYDGRra4uGwyGFQiHW399Pw+FQXr16lRqNhoREQrI5Opme /Fh+k5GzWGK0K8+9k2jnM0iAYAB8CmgAwFFAAQBHoRzODlBwCrJhIOgLoCeArvi5RoEeEXoFuHN+ 5jZfIDzzN5GBphq0JkBXRF1BbRWNVZRXNVbRYBW1VRRXUVhFWRXFVRRVUVZFUf9s4b5d5vcqrqV3 k+hbRN8m+pbQt4m+JfRtoW8LfZvoW0bfNvq20beMvi307aBvD30H6DtE3yH6jtJ3jL7j9J2k7wR9 J+g7Sd9J+k7Td5K+k/Sdpu8UfWfoO0HfSfpO0neKvlP0naBvB3276NtJ3y76ttG3i76N9G2ibwt9 2+hbRt8O+rbQd4S+I/Qdpe8YfcfoO07fCfrW0HeKvlP0naTvFH0n6btI3z36LtN3lb7r9N2g7z59 N+m7Td9t+u7Td4++e/Tdpa86fdfo+0zfbfru0XeXvpv03aPvHn336btB3y36/tN3n7619N2jb5++/fTd pO8ufbfpW6HvIX0X6btI3236/tB3lb5r9N2gbz59d+jbQN8N+m7Sd5u+W/Tdpm8dfRvoW0vfRvr2 0beOvg30raOvg76v9L2kb5++A/Tdo+8offfoO0PfHfoO0HeOvsP0HaHvPH0n6TtH3wn6TtF3lb4r 9F2j7xZ99+m7Rd8d+m7Rd5++e/Rdo+8mfXfoW6RvK31b6FtK3wb6ltG3jL5l9C2hbwV9K+lbTd9a +tbQd4m+VfStoW8tfZvo20bfFvq20beOvlX0raJvJX1r6FtJ31L6VtC3gr7l9K2gbzl9y+lbRd8K +lbRt4a+NfSto28lfWvoW0PfGvq20LeOvi30raNvB30b6dtM32b6FtO3mL7F9K2k7yF9N+m7S99d +m7Sd5++O/RdpG+Rvqv0XaTvMn3/0H+Zvhv0XaTvJn1X6btK31X6LtJ3i747t+jbRt8N+m7Qt5e+ hfSto+8ifRvp20zfZvpW0reZvnn0raPvHn336btH3y36btD3jL479D2hbxl9t+h7Sd9d+m7Td5e+ O/Tdpb9n3xP6XtB3nr6X9F2j7zZ9t+m7R98r+l7Rd4++d/Q9o+8VfW/pW0LfO/pe0/eWvrf0vaXv IX0f6PtI31v6/tH3gb7/pL5f9P2i75d87+h7R99r+l7T95K+l/S9pu8tfW/pf0vfa/pf0/eWvnf0 vabvDX2v6FtC31v63tL3lr639L2j7zV9b+h7S99r+t7S95a+d/S9pW8JfW/pe0PfO/re0feWvnf0 vabvDX1v6HtN31v6XtP3lr539L2h7xV9S+h7Q99b+l7T95a+d/S9pu8NfW/oe0vfG/re0PeGvjf0 vaHvDX1v6HtN30v6XtH3lr6X9L2j7xV9L+l7Rd87+l7R95K+l/RdoW8BfQvo/0/Jq6qgXwB6BgV4 9yQMAFIBRgCAEwDgFvRe/4fCl2N5M0VRUS3FGdXtTTW6ZSlD3YhbKEL0/0UHc+QGZP5LlhUZSS1G ZwWhALtGdBwp3hVfP0FIDREeCB/mV4LUVQ6OWMW7x3CmM3vPWJO0LnlJrHFwUHNLBBNKdxDJCxvL 2VVhCBzr6lJbLaRAKGdtHiBP5Zdy9wQTOTwL1SrLbYRu+eFKqA9YE2bfHgz8y/6hRMT3+e6d5S+x/S9 oe8lfZfou0zfZfou0HeRviX0naHvKH0H6DtA3wX6LtJ3gb4L9F2gbwl91+i7Rl81+qrRV4W+avRV oa8afVXoq0ZfFfoq0VeNvir01aKvGn216KtGXz36qtFXg74a9NWgrxZ9NegrRl8N+mrRV4m+SvRV oq8SfZXoq0RfJfoq0VeJvkr0VaGvEn0V6KtAXzn6ytFXjr4K9FWirxJ9leivQn8V+quArwp8VcBX BXwV4KuArwp8leCvAr4K+CrAXwH4KsNfDfhXgL8K+CvAXwX8K+CvBHwV4KsEfBXgqwC/EvBVgL8K /KvAXw34K8BfAf4K8K8AfwXhqwx/ZeAvA381+FeAfwV9VeCvCvzVgL8a/NWCvxrw1x34q8JfHeir Al8N+KrAXw34qgJfVeCrCnyVhb/K8FcZ+KsKfFWBr6rAVxX4Kgt/VeGvKvBVBr6KwFcV+CoLf5XA VxX4qgJ/VeGvMvxVhr+KwFcV+KoKf5XhrxzwVQq+SsFXJeCrEnxVBb4q4asK+KpFwFcd+KpFwFcN +KoFf7Xhr1b8VQu+asFfbfarFnxVg76qxF81eKoGf7Xgr1bwVQv+qhF81YKvavBVLfiqBl814K8G /FWDv+rAVzX4qw58VYe/6sBXHeir+vFVH7zqw1cD+KoVf9V9+KoPX/XhqwF8NY6vBvDVOL4awFcj +GoAX43iqzF8NY6vBvDVCL4awFcj+GoEX43gqxF8NQ6vBuDVALwagFcj+GoUXo3AqyF4NQSvxuHV KLwahVdj8GoSXk3CqzF4NQGvRuHVJLyagFfj8GoKXk3BqwF4NQevpuHVFLyagFfj8GoWXk3BqxF4 NQmvxuHVBLyahFdj8GoCXo3BqxF4NQyv+uDVH7z6gVc/8OoHXv3Aqyp49YWvfuBVD7yqgVcd+KoD X3Xhqz54VQOv6uBVDbzqgFdd8KoGXtXAqxp41QGvOvBVB7zqgFcd8KoIXhXAqwJ4VQSvCuBVFbyq glcF8KoEXhXBqwJ4VQGvCuBVGbwqgFcl8KpCeEBk8CoM/CrAVxH8KuCrAr5K4FcFfJWBrwp8VeGr AryVwVcVuKrAV1X4qj5+VB++6sNXffiql9+PUu/nT0HKXRj+8kkfBFRqD5RNTLR6LS3hfDNbQGVm zZbNOQnZz2KmZGj/R4LqOxYLxH5mH4fV0FdNMWYuDL8NfKS4RYGh/tUPRV0Zbi5h5hC6oC8xXl/x kJZpmpH3eXRxdvAWp5hSP40E4tZcJjE3RNcEuKYBPZ0YaGhAX0cdwD0D0D0D0D8H0H8UUD8PjNmH NtqUMNFHtFEhdUBvBeha4Z9kqflT0VR2BazrLSDNj7nSgVYBT1mzRx6bCl6e01TKeJGlVWDKJuBl 1yZAXZg2I9K5TL6mPTXqyR5gqw2OcTZK1eQxJauVAqwVdALO8Yl6OmM0zqiOlGVNr2M/l4l+g5r +h+vI3X2jAzEn8+3C5fFRiNP8lNLHB8ZLQlNbp4XUvkPrYw4VcB1h0dEjjBJwGfEppTIDDOUvVJpq sHsVp9zj1W3g0xPEZvNzc3JYVigVGW1a55Yy1EZc/ib3OWXG9mqeCVrHqDJzvBwOvGjNZf2dHCAu r5tC0pVAqYrK8oQvGxZvJZKlM7yZ6NYmCbkm6oUmPkW9Sq1dUKiRF2yz5K22yQzZLhJL0RTJ2RJB xDKwE6PEr9Ps+k6eVPdCf8D3/yY2FQmC5nZhFq5Lx6hqpBZqNqMLr0k3xKfKY7RXKuqvhq/4c8gPtj zzRe3i52dF6xIu9oWPdUqYiE4JDrQxVTdXxFUe2MQeVqqBXc8Ec3PdR4HtZaQV0bGKaD7RKy4EvXm +H16dH4j1hpkpJF1i/8/jrI9S4PqVj3DZ4rJ2gAEX5pKqBHm9tZ1KCjsNvtUoVhQu+xXfnGNiFAx z0y2D5PafH0ajVjSyj5RJxJqLUGxNKF1X8+Bnp5jbDkVFWkfv8+XPx3VHGW4Tqr9vQ8k0z9K9nUu5 o6HX9mI4X+W6g+L1/hJgwNhePxWqvjXeLMdBr2RHjK5MnfFqGWxJ7vfxl1Lx5hI8GvNx7+W5qznC xJoYN5oGl4eVL3kSf/pPi8aaQh4plbBQU/5S4cpRBkGmM2LNpQI4hEQRq2QHFXY5bJr6dXRjVZb oRfMBfQAXQZ0O8U3Pp07j0IUEC7wEK6CxHhqKp7l8rAGKDNn5fFZK1NfXHs8iqCFvYT9uA6nJ lKRvCLF4/W/Ww8B+EwSQ3T8hVMF6e6Fce2UbwEXf0FxAkNQJVVU6cJvKA1uh4PxLzPjpNQ7Ry5Yo wyJnKbV+xCwWgPfL8F9KyPfGAaUlJHMohAiNQKEZrYfIl8ItIDKhKDVoTCkKVdXH6iVINs0tL3IG y7JO8IxUIvkZGUjJTvCm8c/m28KXnfgvFBuRBx1EQ6Pq9dVQ9n0r0bYzH/uXvglQKZjhR5P2FqN9T 1RvW3rZZvPdTVZXJeFoELHdkBDsC3jD7rYS6v7cNmDKLvQ8b2+d/Irc3OU3y5PoRfGz7k5sN0x0bv +7UtQ8NxcHMkZ1d/EknILLJbfSuO+xOLjRiQm80P9f4Hy1C7DLLeXKp3OhYV2W5PmSRtqt+kk2tO5a e5+PmtYLq87vLTvBWvUJ5eTlzj8ajuF0J5bXq5oSVy5K2tVdDcuv4yLN0KmI0DJbxkxFhlPPXZPU/L 1FvZk6v+UmTJN9F9j0vWh5WmuF8HS9gR2dK+JlPJAaZTrb3VzUdN5pXBsKdumNuR5B3S8xKSDXQAA AO0eFHjJZDBxjYoWgzBb0LkqrT5FvGHqSO3kMPpXqBKUjuDIGGvCJTm3zrTJNLBQ8w6jWDzVxgXk4P 5k0/xz7t2k/3Fz7ZnNqy0bDHVVQVVpZGGHiw5vDHlxZHqwv4Sez9zTBNXm+BspN5Dxvhxdjy3nJcW 5dDnqaKqyCqCJAJ8qlOXy5UPE1u5qSPqIWclfWV6SYJ1xtFOsU8h6dZlMr+L3fMDNMf1xLCNX5XE0N LVxT60TyLqPTKMEjMJYTCbPmm3DRZO3AwSLFXATQ3fW8CvzPvTfLpPVDgJJSHXLF3mVvtGXvmfb6t 8B4vKqLF3xBVZEr34GRNm3cLVBVh3i/wU1CZcM8+4V7pVDqcQn/vMOIq/W2wPIZ1Ynua5Lbo6xjdTf o5cDSvVRVLJLrLs4d9YUeFrYCc6Z8B/hWVEfr3qHPp9NamS9V8Z1O3bYeUCY3m0pZr6wLK+/jqqJCMr J5cOu5qWPVXVb80J6oIQYfCyGU8QF1qT6i8d6V5aAAA//wCAP//gP//X//hDwAAAP//XwD//xsA//8AAP //CP//OQD//xUA//8N//8AAP//bQD//4AA//87AP//5QD//+wA//8eAP//DAD//6cA//9yAP//hQD// 4sA//+iAP//ogD//6cA//+sAP//nAD//40A//+OAP//X//+/v/hDwAAAP//igD//xAA//8o//bE//8 eAP7//s////P//P/+////n/zf//f/+f/+/////+//T//n/zf///+X//f/XwAA//9XAP//dQD// 7EA//95AP//yQD//5kA//+pAP//rAD//6kA//+oAP//hAD//6UA//+sAP//0wD//0kA//+iAP//nwD/ /7EA//85AP//YQD//8MA//9xAP//3QD//2kA//+ZAP//aQD//4EA//+CAP//6wD//2cA//8pAP//aAD/ /5EA//9cAP//bQD//+EA//9wAP//lgD//5MA//9sAP//jQD//8sA//+3AP//gQD//4QA//+2AP// swD//5UA//+EAP//rAD//88A//+jAP//+wD//+IA//8YAP//YAD//5QA//+kAP//eQD//5kA//+f AP//iAD//3cA//+RAPYAAADtABcAIQApACkAKQApAEEAPQBFAEUAVQA9ABsA//8AAAAAAP//AAAA AP//AAAAAAAAAP7/AAAAAAAAAP//AAAAAAD//wAA//8AAP//AAAAAAAAAP//AP//AP//AAD//wAA //8AAP//AAD//wD//wD//wAA//8A//8A//8AAP//AAABHgAoACEAJQAVAA8AFwAXAA0A9gDqAA== " alt="Krishwin D S Certificate" class="cert-image" />
+      </div>
+    </div>
+  </div>
+</div>
